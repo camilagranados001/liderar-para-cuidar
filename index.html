@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía VATCO Group - Liderar para Cuidar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- QRCode generator library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vatcoBlue: '#0b2545',
+                        vatcoGold: '#e0a96d',
+                        vatcoYellow: '#f4c430',
+                        vatcoRed: '#a61c1c',
+                        vatcoDark: '#071628',
+                        vatcoLight: '#f4f7fb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .print-break { page-break-after: always; }
+            details { open: true !important; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(224, 169, 109, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0b2545 0%, #133863 50%, #071628 100%);
+        }
+    </style>
+</head>
+<body class="bg-vatcoLight text-gray-800 font-sans antialiased selection:bg-vatcoGold selection:text-vatcoBlue">
+
+    <!-- Header with Official Logo -->
+    <header class="hero-gradient text-white sticky top-0 z-50 shadow-xl border-b border-vatcoGold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center space-x-4">
+                <div class="bg-white p-2 rounded-xl shadow-lg border border-vatcoGold/40 flex items-center justify-center">
+                    <!-- Official Logo images_2.png -->
+                    <img src="./images__1.png" alt="VATCO Group Logo" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/180x50/0b2545/e0a96d?text=VATCO+GROUP'">
+                </div>
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-vatcoGold font-semibold">Transporte de Valores Ltda.</span>
+                    <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        Liderar para Cuidar <span class="text-xs px-2 py-0.5 bg-vatcoRed text-white rounded-full font-medium">Bienestar & SST</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex items-center flex-wrap gap-2 sm:gap-3 no-print text-sm font-medium">
+                <a href="#temas" class="hover:text-vatcoGold transition px-3 py-1.5 rounded-lg hover:bg-white/10"><i class="fa-solid fa-list-check mr-1 text-vatcoGold"></i> 12 Temas Clave</a>
+                <a href="#autocompasion" class="hover:text-vatcoGold transition px-3 py-1.5 rounded-lg hover:bg-white/10"><i class="fa-solid fa-brain mr-1 text-vatcoGold"></i> Test Autocompasión</a>
+                <a href="#evaluacion" class="hover:text-vatcoGold transition px-3 py-1.5 rounded-lg hover:bg-white/10"><i class="fa-solid fa-clipboard-question mr-1 text-vatcoGold"></i> Autoevaluación</a>
+                <button onclick="window.print()" class="bg-vatcoGold hover:bg-vatcoGold/90 text-vatcoBlue font-bold px-3.5 py-1.5 rounded-xl shadow transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-print"></i> Imprimir / PDF
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 border-b-4 border-vatcoGold">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e0a96d_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-vatcoGold/20 border border-vatcoGold/40 text-vatcoGold text-xs sm:text-sm font-semibold mb-6">
+                <i class="fa-solid fa-shield-heart"></i> Conferencia Colsanitas & Colsubsidio — Salud Mental y Liderazgo Protector
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+                Liderazgo con Sentido Humano para la <span class="text-vatcoGold">Protección Operativa</span>
+            </h2>
+            <p class="text-base sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
+                En <strong class="text-white">VATCO Group Ltda.</strong> promovemos entornos de trabajo seguros, empáticos y regulados emocionalmente para proteger el activo más valioso: nuestro equipo humano.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content: 12 Topics with Expandable Accordion & Images -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div id="temas" class="mb-12 text-center">
+            <span class="text-vatcoRed font-bold uppercase tracking-wider text-xs bg-vatcoRed/10 px-3 py-1 rounded-full border border-vatcoRed/20">Marco Teórico y Normativo</span>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-vatcoBlue mt-2">Los 12 Temas Esenciales de "Liderar para Cuidar"</h3>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base">
+                Haga clic en <strong class="text-vatcoBlue">"Ver detalle completo del tema"</strong> en cada tarjeta para desplegar la información detallada, conceptos clave y normatividad vigente.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Topic 1 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoBlue flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoBlue/10">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Psicología y Regulación Emocional" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/0b2545/e0a96d?text=Regulacion+Emocional'">
+                    <span class="absolute top-3 left-3 bg-vatcoBlue text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 01</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Psicología y Regulación Emocional</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Modelo de Barlow y Sistemas de Paul Gilbert (Amenaza, Logro y Afiliación). Entendimiento de las respuestas emocionales ante situaciones de alta responsabilidad operativa.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Sistema de Amenaza:</strong> Detecta riesgos y activa el cortisol y adrenalina (lucha/huida).</p>
+                                <p><strong>Sistema de Logro:</strong> Impulsa metas y reconocimiento (dopamina).</p>
+                                <p><strong>Sistema de Afiliación:</strong> Genera calma, seguridad y conexión social (oxitocina). Clave para la resiliencia en VATCO Group.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 2 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoGold flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoGold/10">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Autocompasión" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e0a96d/0b2545?text=Autocompasion'">
+                    <span class="absolute top-3 left-3 bg-vatcoGold text-vatcoBlue text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 02</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Autocompasión y Dimensiones de Kristin Neff</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Cultivar la autocompasión para gestionar el error y la presión sin caer en la autoexigencia destructiva ni en el aislamiento emocional.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>1. Amabilidad vs. Autocrítica:</strong> Tratarse con gentileza ante errores.</p>
+                                <p><strong>2. Humanidad Compartida:</strong> Entender que el sufrimiento y la imperfección son universales.</p>
+                                <p><strong>3. Mindfulness:</strong> Observar pensamientos dolorosos sin identificarse ciegamente con ellos.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 3 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoRed flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoRed/10">
+                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80" alt="Sistema Nervioso" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/a61c1c/ffffff?text=Sistema+Nervioso'">
+                    <span class="absolute top-3 left-3 bg-vatcoRed text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 03</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Biología y Sistema Nervioso</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Simpático vs. Parasimpático. Regulación de la activación fisiológica ante situaciones operativas exigentes en transporte de valores.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Sistema Simpático:</strong> Acelera el ritmo cardíaco y prepara para la acción defensiva.</p>
+                                <p><strong>Sistema Parasimpático:</strong> Promueve el descanso, la digestión y la recuperación (frenos biológicos).</p>
+                                <p><strong>Herramientas:</strong> Respiración diafragmática para activar el nervio vago y recuperar la calma.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 4 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoBlue flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoBlue/10">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Entornos de Trabajo Saludables" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/0b2545/e0a96d?text=Entornos+Saludables'">
+                    <span class="absolute top-3 left-3 bg-vatcoBlue text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 04</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Entornos de Trabajo Saludables</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Construcción de espacios de confianza donde la seguridad psicológica permita reportar incidentes, proponer mejoras y expresar necesidades.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Seguridad Psicológica:</strong> Ausencia de temor al castigo por expresar dudas o reportar fallas mecánicas/operativas.</p>
+                                <p><strong>Liderazgo Protector:</strong> Jefaturas cercanas que escuchan activamente antes de juzgar.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 5 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoGold flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoGold/10">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Marco Legal" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e0a96d/0b2545?text=Marco+Legal+Colombia'">
+                    <span class="absolute top-3 left-3 bg-vatcoGold text-vatcoBlue text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 05</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Marco Legal de Riesgo Psicosocial en Colombia</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Actualización normativa con la <strong class="text-vatcoBlue">Ley 2460/2025 y el Decreto 728/2025</strong> sobre prevención de riesgos psicosociales en el trabajo.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Ley 2460 de 2025:</strong> Obligatoriedad de programas de intervención en salud mental para empresas de alto riesgo.</p>
+                                <p><strong>Decreto 728 de 2025:</strong> Lineamientos técnicos para la evaluación de factores psicosociales intralaborales y extralaborales.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 6 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoRed flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoRed/10">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Hiperconectividad" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/a61c1c/ffffff?text=Tecnodestres'">
+                    <span class="absolute top-3 left-3 bg-vatcoRed text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 06</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Hiperconectividad y Tecnodestres</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Derecho a la desconexión laboral consagrado en la <strong class="text-vatcoBlue">Ley 2191 de 2022</strong>. Protección del tiempo de descanso y vida personal.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Ley 2191 de 2022:</strong> Garantiza que los trabajadores no respondan llamadas o mensajes fuera de su jornada sin remuneración por horas extra.</p>
+                                <p><strong>Prevención:</strong> Establecer canales claros de comunicación de emergencia para operaciones de valores.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 7 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoBlue flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoBlue/10">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Acoso Sexual Laboral" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/0b2545/e0a96d?text=Ambiente+Respetuoso'">
+                    <span class="absolute top-3 left-3 bg-vatcoBlue text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 07</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Acoso Sexual Laboral</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Lineamientos estrictos de la <strong class="text-vatcoBlue">Ley 2365 de 2024 y el Decreto 1040 de 2026</strong> para la prevención y sanción de violencias basadas en género.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Ley 2365 / Decreto 1040:</strong> Protocolos obligatorios de atención, canales seguros de denuncia y protección contra represalias en VATCO Group.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 8 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoGold flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoGold/10">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Andragogia" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e0a96d/0b2545?text=Andragogia+Knowles'">
+                    <span class="absolute top-3 left-3 bg-vatcoGold text-vatcoBlue text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 08</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Andragogía: Liderar es Enseñar a Adultos</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Principios de Malcolm Knowles aplicados al liderazgo: los adultos aprenden desde la experiencia, la utilidad práctica y la motivación intrínseca.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Enfoque Práctico:</strong> Capacitaciones orientadas a resolver problemas reales de campo y seguridad en el transporte de valores.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 9 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoRed flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoRed/10">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Cultura Contra Cultura" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/a61c1c/ffffff?text=Cultura+Organizacional'">
+                    <span class="absolute top-3 left-3 bg-vatcoRed text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 09</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Cultura Contra Cultura</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Transformación de narrativas organizacionales tóxicas ("aguantar todo") hacia una cultura de cuidado mutuo, reporte oportuno y corresponsabilidad.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Nuevo Paradigma:</strong> El verdadero valor en VATCO Group radica en cuidar la integridad física y mental de cada colaborador.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 10 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoBlue flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoBlue/10">
+                    <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=600&q=80" alt="Gestion del Desempeno" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/0b2545/e0a96d?text=ISO+45003'">
+                    <span class="absolute top-3 left-3 bg-vatcoBlue text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 10</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Gestión del Desempeño que Cuida vs. Que Enferma</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Basado en la norma internacional <strong class="text-vatcoBlue">ISO 45003:2021</strong> sobre gestión de la salud y seguridad psicológica en el trabajo.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>ISO 45003:2021:</strong> Identificación de peligros psicosociales y diseño de cargas de trabajo equilibradas sin burn-out.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 11 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoGold flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoGold/10">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Tres Niveles de Prevencion" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e0a96d/0b2545?text=Prevencion+SST'">
+                    <span class="absolute top-3 left-3 bg-vatcoGold text-vatcoBlue text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 11</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Tres Niveles de Prevención</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Estrategia integral en SST: Primaria (eliminar riesgos), Secundaria (detección temprana) y Terciaria (rehabilitación y reincorporación).
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Intervención Multinivel:</strong> Garantiza seguimiento médico y psicológico continuo en VATCO Group.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 12 -->
+            <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoRed flex flex-col overflow-hidden">
+                <div class="h-44 w-full relative overflow-hidden bg-vatcoRed/10">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=600&q=80" alt="Ruta de Prevencion" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/a61c1c/ffffff?text=Ruta+Salud+Mental'">
+                    <span class="absolute top-3 left-3 bg-vatcoRed text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 12</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-vatcoBlue mb-2">Ruta de Prevención de Salud Mental</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Alianza institucional <strong class="text-vatcoBlue">Colsubsidio + Universidad del Rosario</strong> para la atención oportuna y derivación médica especializada.
+                        </p>
+                    </div>
+                    <div>
+                        <details class="group bg-vatcoLight rounded-xl p-3 border border-vatcoGold/30">
+                            <summary class="cursor-pointer font-bold text-vatcoBlue text-xs sm:text-sm flex items-center justify-between select-none">
+                                <span>Ver detalle completo</span>
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="mt-3 pt-3 border-t border-vatcoGold/20 text-xs text-gray-700 space-y-2 leading-relaxed">
+                                <p><strong>Ruta Clara:</strong> Canales de atención confidencial, líneas de apoyo psicológico 24/7 y programas de bienestar Colsanitas.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Test de Autocompasion & QR Section -->
+    <section id="autocompasion" class="py-16 bg-vatcoDark text-white relative overflow-hidden border-t border-vatcoGold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-vatcoGold/20 text-vatcoGold text-xs font-semibold mb-4 border border-vatcoGold/30">
+                    <i class="fa-solid fa-qrcode"></i> Enlace Oficial y Código QR
+                </div>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Test de Autocompasión</h3>
+                <p class="text-gray-300 mt-2 text-sm sm:text-base">
+                    Escala de Autocompasión (Self-Compassion Scale) desarrollada por Kristin Neff. Instrucciones oficiales para colaboradores de VATCO Group.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Instructions Box (Left) -->
+                <div class="lg:col-span-7 bg-white/5 border border-vatcoGold/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+                        <div class="w-12 h-12 rounded-2xl bg-vatcoGold text-vatcoBlue flex items-center justify-center font-bold text-2xl shadow-lg">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-vatcoGold uppercase tracking-wider font-semibold">Mensaje para Trabajadores</span>
+                            <h4 class="text-xl font-bold text-white">Estimado/a colaborador/a:</h4>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-6">
+                        Como parte de una actividad orientada al bienestar y fortalecimiento de los recursos personales, le invitamos a completar el siguiente <strong class="text-vatcoGold">Test de Autocompasión</strong>:
+                    </p>
+
+                    <!-- Link box -->
+                    <div class="bg-vatcoBlue/60 border border-vatcoGold/40 rounded-2xl p-4 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-3 truncate">
+                            <i class="fa-solid fa-link text-vatcoGold text-xl"></i>
+                            <span class="text-sm font-mono text-vatcoGold truncate">https://self-compassion.org/self-compassion-test/</span>
+                        </div>
+                        <a href="https://self-compassion.org/self-compassion-test/" target="_blank" rel="noopener noreferrer" class="bg-vatcoGold hover:bg-vatcoGold/90 text-vatcoBlue font-bold text-xs px-4 py-2.5 rounded-xl shadow transition whitespace-nowrap flex items-center gap-1.5">
+                            <span>Abrir Test</span> <i class="fa-solid fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+                        Este cuestionario tiene como propósito conocer la manera en que cada persona suele tratarse y responder ante situaciones difíciles, errores, momentos de estrés o experiencias que generan malestar. La autocompasión se relaciona con la capacidad de brindarnos comprensión, aceptación y apoyo en momentos en los que podemos ser especialmente críticos con nosotros mismos.
+                    </p>
+
+                    <div class="space-y-3 bg-black/30 p-5 rounded-2xl border border-white/10 text-xs sm:text-sm text-gray-200">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-thumbtack text-vatcoGold mt-1"></i>
+                            <div><strong class="text-white">¿Qué debe hacer?</strong> Ingrese al enlace y responda las afirmaciones de acuerdo con lo que realmente suele experimentar o hacer, procurando no pensar demasiado cada respuesta. No existen respuestas correctas o incorrectas.</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-stopwatch text-vatcoGold"></i>
+                            <div><strong class="text-white">Tiempo aproximado:</strong> 5–10 minutos.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-lock text-vatcoGold mt-1"></i>
+                            <div><strong class="text-white">Importante:</strong> La prueba tiene un carácter orientativo y de autoconocimiento. No es un examen de conocimientos ni una evaluación de desempeño laboral. Sus respuestas deben ser contestadas con sinceridad, ya que lo importante es conocer su propia percepción.</div>
+                        </div>
+                    </div>
+
+                    <p class="text-vatcoGold text-xs sm:text-sm font-medium mt-6 italic text-center sm:text-left">
+                        Al finalizar, podrá conocer el resultado obtenido y tener una aproximación a la forma en que suele relacionarse consigo mismo/a frente a las dificultades. ¡Agradecemos su participación y disposición! 🌱
+                    </p>
+                </div>
+
+                <!-- QR Generator Box (Right) -->
+                <div class="lg:col-span-5 flex flex-col items-center justify-center bg-white text-gray-900 rounded-3xl p-8 shadow-2xl border-4 border-vatcoGold text-center">
+                    <span class="text-xs uppercase tracking-widest font-bold text-vatcoRed bg-vatcoRed/10 px-3 py-1 rounded-full mb-4">Escanee con su Celular</span>
+                    <h5 class="text-xl font-extrabold text-vatcoBlue mb-2">Acceso Directo al Test</h5>
+                    <p class="text-gray-600 text-xs mb-6">Apunte la cámara de su smartphone hacia el código QR para iniciar el cuestionario de Kristin Neff.</p>
+                    
+                    <!-- QR Container -->
+                    <div id="qrcode" class="p-4 bg-white rounded-2xl shadow-inner border border-gray-200 flex items-center justify-center mb-6"></div>
+                    
+                    <div class="w-full bg-vatcoLight p-3 rounded-xl border border-gray-200 text-xs text-gray-700 font-medium">
+                        <i class="fa-solid fa-building-shield text-vatcoBlue mr-1"></i> VATCO Group Ltda. — Área de Bienestar y SST
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Autoevaluacion Section -->
+    <section id="evaluacion" class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-vatcoBlue font-bold uppercase tracking-wider text-xs bg-vatcoBlue/10 px-3 py-1 rounded-full border border-vatcoBlue/20">Autoevaluación Rápida VATCO</span>
+                <h3 class="text-3xl font-extrabold text-vatcoBlue mt-2">¿Cómo está su Nivel de Autocuidado Hoy?</h3>
+                <p class="text-gray-600 text-sm mt-2">Seleccione su nivel actual en los 3 pilares clave para obtener una recomendación personalizada.</p>
+            </div>
+
+            <div class="bg-vatcoLight rounded-3xl p-6 sm:p-8 shadow-xl border border-vatcoGold/30">
+                <form id="quizForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-vatcoBlue mb-2">1. ¿Cómo califica su nivel de desconexión y descanso fuera del horario laboral?</label>
+                        <select id="q1" class="w-full bg-white border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-vatcoBlue focus:outline-none">
+                            <option value="3">Excelente: logro desconectarme y recargar energías.</option>
+                            <option value="2">Regular: a veces pienso en el trabajo durante mi descanso.</option>
+                            <option value="1">Bajo: me cuesta mucho desconectarme y siento agotamiento continuo.</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-vatcoBlue mb-2">2. Ante un error o situación difícil en la operación, ¿cómo suele reaccionar consigo mismo?</label>
+                        <select id="q2" class="w-full bg-white border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-vatcoBlue focus:outline-none">
+                            <option value="3">Con comprensión y búsqueda de soluciones sin castigarme en exceso.</option>
+                            <option value="2">Con autocrítica moderada, aunque suelo sobrepensarlo.</option>
+                            <option value="1">Con alta dureza y autocrítica severa que afecta mi estado anímico.</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-vatcoBlue mb-2">3. ¿Siente que cuenta con espacios de escucha y apoyo con sus compañeros y líderes?</label>
+                        <select id="q3" class="w-full bg-white border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-vatcoBlue focus:outline-none">
+                            <option value="3">Sí, tenemos excelente comunicación y confianza mutua.</option>
+                            <option value="2">Parcialmente, aunque a veces falta más apertura.</option>
+                            <option value="1">No mucho; siento que debo cargar con todo individualmente.</option>
+                        </select>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button type="button" onclick="calcularResultado()" class="bg-vatcoBlue hover:bg-vatcoBlue/90 text-vatcoGold font-bold px-8 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 mx-auto">
+                            <i class="fa-solid fa-calculator"></i> Ver mi Diagnóstico y Recomendación VATCO
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Result Box -->
+                <div id="resultadoBox" class="hidden mt-8 p-6 rounded-2xl bg-white border-2 border-vatcoGold shadow-inner transition-all duration-300">
+                    <h4 id="resTitle" class="text-lg font-bold text-vatcoBlue mb-2"></h4>
+                    <p id="resDesc" class="text-gray-700 text-sm leading-relaxed"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Official Logo -->
+    <footer class="bg-vatcoDark text-white py-12 border-t border-vatcoGold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-4">
+                <div class="bg-white p-2 rounded-xl">
+                    <img src="images_2.png" alt="VATCO Group" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/150x40/0b2545/e0a96d?text=VATCO'">
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-white">VATCO Group Ltda.</p>
+                    <p class="text-xs text-gray-400">Transporte de Valores — Bienestar y Salud Mental</p>
+                </div>
+            </div>
+            <div class="text-center md:text-right text-xs text-gray-400">
+                <p>Basado en la Conferencia Colsanitas & Colsubsidio "Liderar para Cuidar"</p>
+                <p class="text-vatcoGold mt-1">© 2026 VATCO Group Ltda. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Generate QR Code on load
+        window.onload = function() {
+            const qrContainer = document.getElementById("qrcode");
+            if(qrContainer && typeof QRCode !== 'undefined') {
+                new QRCode(qrContainer, {
+                    text: "https://self-compassion.org/self-compassion-test/",
+                    width: 180,
+                    height: 180,
+                    colorDark: "#0b2545",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+        };
+
+        // Quiz calculator function
+        function calcularResultado() {
+            const q1 = parseInt(document.getElementById('q1').value);
+            const q2 = parseInt(document.getElementById('q2').value);
+            const q3 = parseInt(document.getElementById('q3').value);
+            const total = q1 + q2 + q3;
+
+            const box = document.getElementById('resultadoBox');
+            const title = document.getElementById('resTitle');
+            const desc = document.getElementById('resDesc');
+
+            box.classList.remove('hidden');
+
+            if(total >= 8) {
+                title.innerHTML = '<i class="fa-solid fa-circle-check text-green-600 mr-2"></i> ¡Excelente Nivel de Autocuidado!';
+                desc.innerHTML = 'Usted mantiene un equilibrio muy saludable entre su labor en VATCO Group y su bienestar emocional. Continúe practicando la escucha activa y sirva de inspiración empática para sus compañeros de equipo.';
+            } else if(total >= 5) {
+                title.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-yellow-600 mr-2"></i> Nivel Moderado: Oportunidad de Mejora';
+                desc.innerHTML = 'Presenta algunos niveles de sobrecarga o autocrítica. Le recomendamos realizar el <strong>Test de Autocompasión de Kristin Neff</strong> escaneando el código QR superior y aplicar pausas activas durante su jornada laboral.';
+            } else {
+                title.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-red-600 mr-2"></i> Alerta de Carga Emocional Elevada';
+                desc.innerHTML = 'Sus respuestas sugieren un alto desgaste o dificultad para gestionar el estrés. Le invitamos a acercarse a los canales de bienestar de Colsubsidio/Colsanitas y conversar con su líder o equipo de SST en VATCO Group. ¡Su bienestar es nuestra prioridad!';
+            }
+
+            box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
