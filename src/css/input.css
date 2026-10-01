@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados VATCO */
+body {
+    background-color: #f4f7fb;
+    font-family: 'Inter', sans-serif;
+    color: #1d2d44;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #0b2545 0%, #133863 50%, #071628 100%) !important;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(224, 169, 109, 0.3);
+}
+
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media print {
+    .no-print { display: none !important; }
+    body { background: white !important; color: black !important; }
+    .print-break { page-break-after: always; }
+    details { open: true !important; }
+}

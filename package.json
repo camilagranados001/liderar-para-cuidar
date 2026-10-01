@@ -1,0 +1,11 @@
+{
+  "name": "vatco-bienestar",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/styles.css --minify",
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
