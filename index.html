@@ -24,7 +24,7 @@
             
             <div class="flex items-center space-x-4">
                 <div class="bg-white p-2 rounded-xl shadow-lg border border-vatcoGold/40 flex items-center justify-center">
-                    <img src="./images__1.png" alt="VATCO Group Logo" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/180x50/0b2545/e0a96d?text=VATCO+GROUP'">
+                    <img src="./src/img/images__1.png" alt="VATCO Group Logo" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/180x50/0b2545/e0a96d?text=VATCO+GROUP'">
                 </div>
                 <div>
                     <span class="text-xs uppercase tracking-widest text-vatcoGold font-semibold">Transporte de Valores Ltda.</span>
@@ -101,7 +101,7 @@
                 <!-- Tema 01 -->
                 <div class="glass-card rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-vatcoBlue flex flex-col overflow-hidden">
                     <div class="h-44 w-full relative overflow-hidden bg-vatcoBlue/10">
-                        <img src="./psicologia-y-bienestar.jpeg" alt="Psicología y Regulación Emocional" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/0b2545/e0a96d?text=Regulacion+Emocional'">
+                        <img src="./src/img/psicologia/psicologia-y-bienestar.jpeg" alt="Psicología y Regulación Emocional" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/0b2545/e0a96d?text=Regulacion+Emocional'">
                         <span class="absolute top-3 left-3 bg-vatcoBlue text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Tema 01</span>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between">
@@ -629,9 +629,9 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Foto 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('IMG-20260928-WA0082.jpg', 'La Gran Entrega de Obsequios', 'Momentos de expectativa, alegría y participación activa de todo el equipo durante la entrega de regalos en las instalaciones de VATCO Group.')">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('./src/img/amor_y_amistad/1.jpeg', 'La Gran Entrega de Obsequios', 'Momentos de expectativa, alegría y participación activa de todo el equipo durante la entrega de regalos en las instalaciones de VATCO Group.')">
                     <div class="h-64 overflow-hidden relative bg-gray-100">
-                        <img src="IMG-20260928-WA0082.jpg" alt="Entrega de regalos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0b2545/ffffff?text=Amigo+Secreto+VATCO';">
+                        <img src="./src/img/amor_y_amistad/1.jpeg" alt="Entrega de regalos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0b2545/ffffff?text=Amigo+Secreto+VATCO';">
                         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-35 transition-opacity duration-300 flex items-center justify-center">
                             <span class="text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-xs font-semibold shadow-lg">🔍 Ver Imagen Ampliada</span>
                         </div>
@@ -642,13 +642,13 @@
                     </div>
                 </div>
 
-                <!-- Foto 2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('IMG-20260928-WA0079.jpg', 'Sonrisas y Compañerismo', 'Un ambiente cálido lleno de risas y camaradería que fortalece nuestros lazos y bienestar diario en la compañía.')">
-                    <div class="h-64 overflow-hidden relative bg-gray-100">
-                        <img src="IMG-20260928-WA0079.jpg" alt="Risas y compañerismo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/134074/ffffff?text=Compañerismo+VATCO';">
-                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-35 transition-opacity duration-300 flex items-center justify-center">
-                            <span class="text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-xs font-semibold shadow-lg">🔍 Ver Imagen Ampliada</span>
-                        </div>
+                <!-- Video 2 (Sin evento onclick de imagen) -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-gray-100 group">
+                    <div class="h-64 w-full overflow-hidden relative bg-black">
+                        <video class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" style="max-height: 16rem;" autoplay loop muted playsinline>
+                            <source src="./src/img/amor_y_amistad/1.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
                     </div>
                     <div class="p-5">
                         <h4 class="font-bold text-lg text-[#134074] mb-1">Sonrisas y Compañerismo</h4>
@@ -657,9 +657,9 @@
                 </div>
 
                 <!-- Foto 3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('IMG-20260928-WA0019.jpg', 'Integración de Personal', 'Colaboradores compartiendo una pausa activa llena de energía positiva, conexión emocional y bienestar institucional.')">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('./src/img/amor_y_amistad/2.jpeg', 'Integración de Personal', 'Colaboradores compartiendo una pausa activa llena de energía positiva, conexión emocional y bienestar institucional.')">
                     <div class="h-64 overflow-hidden relative bg-gray-100">
-                        <img src="IMG-20260928-WA0019.jpg" alt="Integración de personal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e0a96d/ffffff?text=Integración+VATCO';">
+                        <img src="./src/img/amor_y_amistad/2.jpeg" alt="Integración de personal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e0a96d/ffffff?text=Integración+VATCO';">
                         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-35 transition-opacity duration-300 flex items-center justify-center">
                             <span class="text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-xs font-semibold shadow-lg">🔍 Ver Imagen Ampliada</span>
                         </div>
@@ -671,9 +671,9 @@
                 </div>
 
                 <!-- Foto 4 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('IMG-20260928-WA0023.jpg', 'Detalles Inolvidables', 'Instantes de gran emoción al descubrir los obsequios preparados con dedicación, afecto y creatividad por cada compañero.')">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('./src/img/amor_y_amistad/3.jpeg', 'Detalles Inolvidables', 'Instantes de gran emoción al descubrir los obsequios preparados con dedicación, afecto y creatividad por cada compañero.')">
                     <div class="h-64 overflow-hidden relative bg-gray-100">
-                        <img src="IMG-20260928-WA0023.jpg" alt="Detalles inolvidables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0b2545/ffffff?text=Detalles+VATCO';">
+                        <img src="./src/img/amor_y_amistad/3.jpeg" alt="Detalles inolvidables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0b2545/ffffff?text=Detalles+VATCO';">
                         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-35 transition-opacity duration-300 flex items-center justify-center">
                             <span class="text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-xs font-semibold shadow-lg">🔍 Ver Imagen Ampliada</span>
                         </div>
@@ -684,13 +684,13 @@
                     </div>
                 </div>
 
-                <!-- Foto 5 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('IMG-20260928-WA0026.jpg', 'Dinámica y Participación', 'La emotiva participación de todo el equipo en la jornada recreativa de nuestra gran familia corporativa.')">
-                    <div class="h-64 overflow-hidden relative bg-gray-100">
-                        <img src="IMG-20260928-WA0026.jpg" alt="Dinámica grupal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/134074/ffffff?text=Dinámica+VATCO';">
-                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-35 transition-opacity duration-300 flex items-center justify-center">
-                            <span class="text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-xs font-semibold shadow-lg">🔍 Ver Imagen Ampliada</span>
-                        </div>
+                <!-- Video 5 (Sin evento onclick de imagen) -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-gray-100 group">
+                    <div class="h-64 w-full overflow-hidden relative bg-black">
+                        <video class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" style="max-height: 16rem;" autoplay loop muted playsinline>
+                            <source src="./src/img/amor_y_amistad/2.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
                     </div>
                     <div class="p-5">
                         <h4 class="font-bold text-lg text-[#134074] mb-1">Dinámica y Participación</h4>
@@ -699,9 +699,9 @@
                 </div>
 
                 <!-- Foto 6 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('IMG-20260928-WA0061.jpg', 'Expectativa y Felicidad', 'La alegría compartida en un espacio de sana convivencia, diversión y desconexión positiva dentro de la compañía.')">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100" onclick="openModal('./src/img/amor_y_amistad/4.jpeg', 'Expectativa y Felicidad', 'La alegría compartida en un espacio de sana convivencia, diversión y desconexión positiva dentro de la compañía.')">
                     <div class="h-64 overflow-hidden relative bg-gray-100">
-                        <img src="IMG-20260928-WA0061.jpg" alt="Expectativa y felicidad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e0a96d/ffffff?text=Felicidad+VATCO';">
+                        <img src="./src/img/amor_y_amistad/4.jpeg" alt="Expectativa y felicidad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e0a96d/ffffff?text=Felicidad+VATCO';">
                         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-35 transition-opacity duration-300 flex items-center justify-center">
                             <span class="text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-xs font-semibold shadow-lg">🔍 Ver Imagen Ampliada</span>
                         </div>
@@ -713,9 +713,9 @@
                 </div>
 
                 <!-- Foto 7 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100 sm:col-span-2 lg:col-span-3 max-w-md mx-auto w-full" onclick="openModal('IMG-20260928-WA0063.jpg', 'Cultura de Bienestar', 'Consolidando una cultura organizacional basada en el cuidado mutuo, la empatía, el reconocimiento y el valor humano.')">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer group border border-gray-100 sm:col-span-2 lg:col-span-3 max-w-md mx-auto w-full" onclick="openModal('./src/img/amor_y_amistad/6.jpeg', 'Cultura de Bienestar', 'Consolidando una cultura organizacional basada en el cuidado mutuo, la empatía, el reconocimiento y el valor humano.')">
                     <div class="h-64 overflow-hidden relative bg-gray-100">
-                        <img src="IMG-20260928-WA0063.jpg" alt="Cultura de bienestar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0b2545/ffffff?text=Cultura+VATCO';">
+                        <img src="./src/img/amor_y_amistad/6.jpeg" alt="Cultura de bienestar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0b2545/ffffff?text=Cultura+VATCO';">
                         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-35 transition-opacity duration-300 flex items-center justify-center">
                             <span class="text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-xs font-semibold shadow-lg">🔍 Ver Imagen Ampliada</span>
                         </div>
